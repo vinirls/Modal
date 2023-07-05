@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Modal</title>
+</head>
+<body>
+    
+    <button onclick="toggleModal()" type="button">Abra Modal</button>
+
+    <div class="modal-background" onclick="toggleModal()"></div>
+
+    <div class="modal">
+        <h2>Modal</h2>
+        <p>
+            Você abriu o modal, eles são ótimos para exibir informações críticas ou confirmar ações!
+        </p>
+    </div>
+
+    <script>
+        const toggleModal = () =>{
+            const bodyClassList = document.body.classList;
+            if(bodyClassList.contains("open")){
+                bodyClassList.remove("open");
+                bodyClassList.add("closed");
+            }else{
+                bodyClassList.remove("closed");
+                bodyClassList.add("open");
+            }
+        }
+    </script>
+
+</body>
+</html>
